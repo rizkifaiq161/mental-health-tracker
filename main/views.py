@@ -10,7 +10,6 @@ def show_main(request):
     context = {
         'npm' : '2206813366',
         'name': 'Rizki Faiq Akbar',
-<<<<<<< HEAD
         'class': 'PBP E',
         'mood_entries': mood_entries
     }
@@ -42,9 +41,3 @@ def show_xml_by_id(request, id):
 def show_json_by_id(request, id):
     data = MoodEntry.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
-=======
-        'class': 'PBP E'
-    }
-
-    return render(request, "main.html", context)
->>>>>>> e1d28bab8dfc65fcde84f5ee03d874f6dead2a28
